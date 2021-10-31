@@ -10,7 +10,7 @@ const Order = (props) => {
     const handleDeleteUser = id => {
         const proceed = window.confirm("Are you sure, you want to delete?")
         if (proceed) {
-            const url = `http://localhost:5000/users/${id}`
+            const url = `https://ghoulish-barrow-11758.herokuapp.com/users/${id}`
             fetch(url, {
                 method: "DELETE"
             })
@@ -28,7 +28,7 @@ const Order = (props) => {
 
 
     const handleUpdateStatus = (id) => {
-        axios.put(`http://localhost:5000/users/${id}`, { status: 'Approved' })
+        axios.put(`https://ghoulish-barrow-11758.herokuapp.com/users/${id}`, { status: 'Approved' })
             .then(res => {
                 window.location.reload()
 

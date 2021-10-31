@@ -18,7 +18,7 @@ const TourDetails = () => {
     const { register, handleSubmit, reset, setValue } = useForm();
     const onSubmit = data => {
         data.status = "Pending"
-        axios.post('http://localhost:5000/users', data)
+        axios.post('https://ghoulish-barrow-11758.herokuapp.com/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Booking successfull')
@@ -28,7 +28,7 @@ const TourDetails = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tours/${tourId}`)
+        fetch(`https://ghoulish-barrow-11758.herokuapp.com/tours/${tourId}`)
             .then(res => res.json())
             .then(data => {
                 setTour(data)

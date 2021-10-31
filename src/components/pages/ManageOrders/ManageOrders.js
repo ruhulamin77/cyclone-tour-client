@@ -8,7 +8,7 @@ const ManageOrders = () => {
     console.log(orders);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://ghoulish-barrow-11758.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
