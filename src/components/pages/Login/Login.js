@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Login.css'
@@ -26,12 +27,12 @@ const Login = () => {
             .finally(() => setIsLoading(false));
     }
     return (
-        <div>
-            <h2>Please Login</h2>
+        <Container className="my-5">
+            <h2 className="text-warning my-5">Please Login</h2>
 
             <button onClick={handleGoogleLogin} className="btn btn-warning">Sign in with google</button>
 
-        </div>
+        </Container>
     );
 };
 

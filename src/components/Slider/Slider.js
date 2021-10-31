@@ -18,7 +18,7 @@ const Slider = () => {
                     src={slider1}
                     alt="First slide"
                 />
-                <Carousel.Caption>
+                <Carousel.Caption className="slider-caption">
                     <h1>Enjoy Your Vacation With <span className="cyclone">Cyclone Tour</span></h1>
                     <p>The world is a book, and those who do not travel read only a page</p>
                 </Carousel.Caption>
@@ -30,7 +30,7 @@ const Slider = () => {
                     alt="Second slide"
                 />
 
-                <Carousel.Caption>
+                <Carousel.Caption className="slider-caption">
                     <h1>Enjoy Your Vacation With <span className="cyclone">Cyclone Tour</span></h1>
                     <p>The world is a book, and those who do not travel read only a page</p>
                 </Carousel.Caption>
@@ -42,7 +42,7 @@ const Slider = () => {
                     alt="Third slide"
                 />
 
-                <Carousel.Caption>
+                <Carousel.Caption className="slider-caption">
                     <h1>Enjoy Your Vacation With <span className="cyclone">Cyclone Tour</span></h1>
                     <p>The world is a book, and those who do not travel read only a page</p>
                 </Carousel.Caption>

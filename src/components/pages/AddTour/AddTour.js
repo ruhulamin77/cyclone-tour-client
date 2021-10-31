@@ -19,10 +19,10 @@ const AddTour = () => {
     }
 
     return (
-        <Container>
+        <Container >
             <div className="add-tour my-5">
-                <h2 className="text-warning my-5">Add a Tour</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <h2 className="text-warning ">Add a Tour</h2>
+                <form onSubmit={handleSubmit(onSubmit)} className="add-tour-form">
                     <input {...register("name", { required: true, maxLength: 20 })} placeholder="Place Name" />
                     <select {...register("duration")}>
                         <option value="2 Days / 3 Nights">2 Days / 3 Nights</option>
@@ -33,7 +33,7 @@ const AddTour = () => {
                     <input type="number" {...register("price")} placeholder="Tour Cost" />
 
                     <input {...register("img")} placeholder="Image URL" />
-                    <input type="submit" />
+                    <input className="btn btn-warning" type="submit" />
                 </form>
 
             </div>

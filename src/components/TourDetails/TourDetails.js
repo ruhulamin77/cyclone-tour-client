@@ -15,9 +15,9 @@ const TourDetails = () => {
     const [tour, setTour] = useState({})
 
 
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, reset, setValue } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        data.status = "Pending"
         axios.post('http://localhost:5000/users', data)
             .then(res => {
                 if (res.data.insertedId) {
@@ -30,8 +30,17 @@ const TourDetails = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/tours/${tourId}`)
             .then(res => res.json())
-            .then(data => setTour(data))
+            .then(data => {
+                setTour(data)
+                setValue('name', user.displayName)
+                setValue('email', user.email)
+                setValue('packageName', tour.name)
+            })
     }, [])
+
+
+
+
 
 
 
@@ -60,9 +69,9 @@ const TourDetails = () => {
                 <div className="tour-detail-form">
                     <h4> Give us your details please</h4>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("packageName", { required: true })} placeholder="Event Name" value={tour.name || ''} />
-                        <input {...register("name", { required: true })} placeholder="Your Name" value={user.displayName || ''} />
-                        <input {...register("email", { required: true })} placeholder="Your Name" value={user.email || ''} />
+                        <input {...register("packageName", { required: true })} placeholder="Event Name" />
+                        <input {...register("name", { required: true })} placeholder="Your Name" />
+                        <input {...register("email", { required: true })} placeholder="Your Name" />
 
                         <textarea className="address-field" {...register("address", { required: true, maxLength: 100 })} placeholder="Your Address" />
                         <input type="number" {...register("phone")} placeholder="Phone Number" />

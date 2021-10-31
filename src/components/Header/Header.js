@@ -24,11 +24,7 @@ const Header = () => {
 
                             {user.email && <NavLink to="/myOrders" className="nav-link">My Orders</NavLink>}
                             {user.email && <NavLink to="/manageOrders" className="nav-link">Manage Orders</NavLink>}
-
-
-
                             {user.email && <NavLink to="/addTour" className="nav-link">Add a Tour</NavLink>}
-
                             {user?.email ? <button onClick={logOut} variant="warning" size="sm" className="mx-3 btn-logout">Logout : {user?.displayName}</button>
                                 :
                                 <NavLink as={Link} to="/login"><button className="mx-3 btn-login ">Login</button></NavLink>}

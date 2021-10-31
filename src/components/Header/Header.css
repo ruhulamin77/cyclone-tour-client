@@ -1,5 +1,9 @@
 #logo {
-  padding: 30px;
+  padding: 20px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
 }
 .nav-item a {
   margin-right: 20px;
@@ -11,25 +15,20 @@
 }
 
 .nav-item a:hover {
-  color: #ea8320;
-  background-color: rgb(25, 75, 70);
+  background-color: #ea8320;
 }
-.user-name {
-  font-weight: bold;
-  text-decoration: none;
-  color: #ea8320;
-}
+
 .btn-logout {
   background-color: #ea8320;
   border: none;
   color: white;
-  border-radius: 3px;
-  padding: 5px 10px;
+  /* border-radius: 3px; */
+  padding: 10px;
 }
 .btn-login {
-  background-color: #12c5c3;
+  background-color: #ea8320;
   border: none;
   color: white;
-  border-radius: 3px;
-  padding: 5px 10px;
+  /* border-radius: 3px; */
+  padding: 10px;
 }

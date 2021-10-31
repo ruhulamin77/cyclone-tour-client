@@ -29,7 +29,7 @@ const ManageOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map(order => <Order key={order._id} order={order}></Order>)
+                            orders.map(order => <Order pending={true} key={order._id} order={order}></Order>)
                         }
                     </tbody>
                 </Table>

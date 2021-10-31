@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
+import useAuth from '../../../hooks/useAuth';
 import Order from '../../Order/Order';
 import './MyOrders.css'
 
 const MyOrders = () => {
 
     const [orders, setOrders] = useState([])
-    console.log(orders);
+    const { user } = useAuth()
+    console.log(user);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch(`http://localhost:5000/${user.email}/users`)
+
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
