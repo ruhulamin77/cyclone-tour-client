@@ -1,0 +1,24 @@
+.tour-details-container {
+  display: flex;
+}
+.tour-detail-info {
+  width: 60%;
+}
+.tour-detail-form {
+  width: 40%;
+}
+.tour-detail-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tour-detail-form form input,
+.address-field {
+  width: 80%;
+  margin-top: 20px;
+}
+textarea {
+  margin-top: 20px;
+}

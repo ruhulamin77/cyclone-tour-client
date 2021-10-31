@@ -1,0 +1,7 @@
+.top-destination-container img:hover {
+  opacity: 50%;
+}
+.top-destination-img {
+  display: flex;
+  flex-direction: column;
+}

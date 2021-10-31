@@ -1,0 +1,9 @@
+.tour-style-icons i {
+  font-size: 80px;
+  border-radius: 50px;
+  background-color: rgb(231, 235, 234);
+  padding: 30px;
+}
+.tour-style-icons i:hover {
+  color: #2cb3b3;
+}
