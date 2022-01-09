@@ -7,17 +7,16 @@ import "./MyOrders.css";
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useAuth();
-  console.log(user);
 
   useEffect(() => {
     fetch(`https://ghoulish-barrow-11758.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, []);
+  }, [orders]);
   return (
     <Container>
       <div className="my-5">
-        <h2 className="text-warning my-5">My Orders</h2>
+        <h2 className="text-warning my-5">My Bookings</h2>
         <Table striped bordered hover>
           <thead>
             <tr>

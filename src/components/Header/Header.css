@@ -4,14 +4,17 @@
 .nav-item {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 }
+
 .nav-item a {
   margin-right: 20px;
   font-size: 18px;
-  /* background-color: rgb(27, 54, 52); */
+  transition: 0.5s;
   font-weight: 400;
   text-decoration: none;
   margin-right: 15px;
+  border-radius: 3px;
 }
 
 .nav-item a:hover {
@@ -22,13 +25,13 @@
   background-color: #ea8320;
   border: none;
   color: white;
-  /* border-radius: 3px; */
+  border-radius: 3px;
   padding: 10px;
 }
 .btn-login {
   background-color: #ea8320;
   border: none;
   color: white;
-  /* border-radius: 3px; */
+  border-radius: 3px;
   padding: 10px;
 }
