@@ -1,6 +1,6 @@
 # Project Name: Cyclone-Tour
 
-This project hosting heroku and live at netlify in [This Link](https://cyclone-tour.netlify.app/).
+This project hosting heroku and live at netlify in [This Link](https://cyclone-tour.web.app/).
 
 ## Used Languages
 
