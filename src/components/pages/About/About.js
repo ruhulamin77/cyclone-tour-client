@@ -1,12 +1,13 @@
 import React from 'react';
-import './About.css'
+import PageLayout from '../../PageLayout/PageLayout';
+import './About.css';
 
 const About = () => {
-    return (
-        <div>
-            <h2>About us</h2>
-        </div>
-    );
+  return (
+    <PageLayout>
+      <h2>About us</h2>
+    </PageLayout>
+  );
 };
 
 export default About;

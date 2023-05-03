@@ -1,12 +1,10 @@
-import React, { useRef } from "react";
-import { useForm } from "react-hook-form";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useParams } from "react-router";
-import "./TourDetails.css";
-import { Container } from "react-bootstrap";
-import axios from "axios";
-import useAuth from "../../hooks/useAuth";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router';
+import useAuth from '../../hooks/useAuth';
+import './TourDetails.css';
 
 const TourDetails = () => {
   const { user } = useAuth();
@@ -15,12 +13,12 @@ const TourDetails = () => {
 
   const { register, handleSubmit, reset, setValue } = useForm();
   const onSubmit = (data) => {
-    data.status = "Pending";
+    data.status = 'Pending';
     axios
-      .post("https://ghoulish-barrow-11758.herokuapp.com/users", data)
+      .post('https://cyclone-tour-server.onrender.com/users', data)
       .then((res) => {
         if (res.data.insertedId) {
-          alert("Booking successfull");
+          alert('Booking successfull');
           reset();
         }
       });
@@ -28,13 +26,13 @@ const TourDetails = () => {
   console.log(tour.name);
 
   useEffect(() => {
-    fetch(`https://ghoulish-barrow-11758.herokuapp.com/tours/${tourId}`)
+    fetch(`https://cyclone-tour-server.onrender.com/tours/${tourId}`)
       .then((res) => res.json())
       .then((data) => {
         setTour(data);
-        setValue("name", user.displayName);
-        setValue("email", user.email);
-        setValue("packageName", tour.name);
+        setValue('name', user.displayName);
+        setValue('email', user.email);
+        setValue('packageName', tour.name);
       });
   }, [tour]);
 
@@ -67,26 +65,26 @@ const TourDetails = () => {
           <h4> Give us your details please</h4>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
-              {...register("packageName", { required: true })}
+              {...register('packageName', { required: true })}
               placeholder="Event Name"
             />
             <input
-              {...register("name", { required: true })}
+              {...register('name', { required: true })}
               placeholder="Your Name"
             />
             <input
-              {...register("email", { required: true })}
+              {...register('email', { required: true })}
               placeholder="Your Name"
             />
 
             <textarea
               className="address-field"
-              {...register("address", { required: true, maxLength: 100 })}
+              {...register('address', { required: true, maxLength: 100 })}
               placeholder="Your Address"
             />
             <input
               type="number"
-              {...register("phone")}
+              {...register('phone')}
               placeholder="Phone Number"
             />
             <input

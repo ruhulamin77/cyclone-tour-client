@@ -1,24 +1,28 @@
 #logo {
-  padding: 20px;
+  padding: 10px;
 }
 .nav-item {
   display: flex;
   align-items: center;
-  text-transform: uppercase;
 }
 
 .nav-item a {
-  margin-right: 20px;
-  font-size: 18px;
-  transition: 0.5s;
+  font-size: 15px;
   font-weight: 400;
   text-decoration: none;
-  margin-right: 15px;
   border-radius: 3px;
+  text-transform: capitalize;
+  padding: 5px 10px;
 }
 
 .nav-item a:hover {
   background-color: #ea8320;
+}
+
+.nav-item .btn-logout:hover,
+.nav-item .btn-login:hover {
+  background-color: #c07315;
+  color: white;
 }
 
 .btn-logout {
@@ -26,12 +30,9 @@
   border: none;
   color: white;
   border-radius: 3px;
-  padding: 10px;
+  padding: 5px 10px;
 }
 .btn-login {
   background-color: #ea8320;
-  border: none;
   color: white;
-  border-radius: 3px;
-  padding: 10px;
 }

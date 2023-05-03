@@ -1,9 +1,9 @@
-import React from "react";
-import { Container, Nav, Navbar, NavbarBrand } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
-import "./Header.css";
-import logo from "../../images/logo.png";
+import React from 'react';
+import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import './Header.css';
+import logo from '../../images/logo.png';
 
 const Header = () => {
   const { user, logOut } = useAuth();
@@ -43,7 +43,7 @@ const Header = () => {
               )}
               {user.email && (
                 <NavLink to="/addTour" className="nav-link">
-                  Add a Tour
+                  Add Tour
                 </NavLink>
               )}
               {user?.email ? (
@@ -51,13 +51,13 @@ const Header = () => {
                   onClick={logOut}
                   variant="warning"
                   size="sm"
-                  className="mx-3 btn-logout"
+                  className=" btn-logout"
                 >
                   Logout : {user?.displayName}
                 </button>
               ) : (
-                <NavLink as={Link} to="/login">
-                  <button className="mx-3 btn-login ">Login</button>
+                <NavLink as={Link} className="btn-login" to="/login">
+                  Login
                 </NavLink>
               )}
             </Nav>

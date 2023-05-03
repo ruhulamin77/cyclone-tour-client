@@ -1,21 +1,21 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import "./Order.css";
+import axios from 'axios';
+import React from 'react';
+import './Order.css';
 
 const Order = (props) => {
   const { _id, packageName, name, address, email, status } = props.order;
 
   const handleDeleteUser = (id) => {
-    const proceed = window.confirm("Are you sure, you want to delete?");
+    const proceed = window.confirm('Are you sure, you want to delete?');
     if (proceed) {
-      const url = `https://ghoulish-barrow-11758.herokuapp.com/users/${id}`;
+      const url = `https://cyclone-tour-server.onrender.com/users/${id}`;
       fetch(url, {
-        method: "DELETE",
+        method: 'DELETE',
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            alert("User deleted successfully");
+            alert('User deleted successfully');
             // const remainingUsers = orders.filter(user => user._id !== id)
             // setOrders(remainingUsers)
             // window.location.reload()
@@ -26,8 +26,8 @@ const Order = (props) => {
 
   const handleUpdateStatus = (id) => {
     axios
-      .put(`https://ghoulish-barrow-11758.herokuapp.com/users/${id}`, {
-        status: "Approved",
+      .put(`https://cyclone-tour-server.onrender.com/users/${id}`, {
+        status: 'Approved',
       })
       .then((res) => {
         // window.location.reload();
