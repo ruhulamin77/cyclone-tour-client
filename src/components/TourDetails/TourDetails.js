@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import defaultImg from '../../images/default.jpg';
 import './TourDetails.css';
 
 const TourDetails = () => {
@@ -44,7 +45,7 @@ const TourDetails = () => {
           <div className="row row-cols-md-1  g-0">
             <div className="mt-3">
               <img
-                src={tour.img}
+                src={tour.img ? tour.img : defaultImg}
                 className="img-fluid rounded-start"
                 alt="..."
               />
