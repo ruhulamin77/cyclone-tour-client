@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Tour.css';
+import defaultImg from '../../images/default.jpg';
 
 const Tour = (props) => {
   const { _id, name, description, price, img, duration } = props.tour;
@@ -10,7 +11,12 @@ const Tour = (props) => {
     <Col>
       <div className="tour-card" style={{ marginBottom: '40px' }}>
         <div className="card-image">
-          <Card.Img variant="top" className="p-2 " height="200px" src={img} />
+          <Card.Img
+            variant="top"
+            className="p-2 "
+            height="200px"
+            src={img ? img : defaultImg}
+          />
         </div>
         <Card.Body>
           <Card.Title className="tour-title">{name}</Card.Title>
