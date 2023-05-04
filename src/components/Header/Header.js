@@ -51,12 +51,12 @@ const Header = () => {
                   onClick={logOut}
                   variant="warning"
                   size="sm"
-                  className=" btn-logout"
+                  className="btn-logout mx-3"
                 >
                   Logout : {user?.displayName}
                 </button>
               ) : (
-                <NavLink as={Link} className="btn-login" to="/login">
+                <NavLink as={Link} className="btn-login mx-3" to="/login">
                   Login
                 </NavLink>
               )}

@@ -1,20 +1,20 @@
-import React from "react";
-import { Button, Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./Tour.css";
+import React from 'react';
+import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Tour.css';
 
 const Tour = (props) => {
   const { _id, name, description, price, img, duration } = props.tour;
 
   return (
     <Col>
-      <div className="tour-card" style={{ marginBottom: "40px" }}>
+      <div className="tour-card" style={{ marginBottom: '40px' }}>
         <div className="card-image">
-          <Card.Img variant="top" className="p-3 " height="200px" src={img} />
+          <Card.Img variant="top" className="p-2 " height="200px" src={img} />
         </div>
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <span className="d-flex">
+          <Card.Title className="tour-title">{name}</Card.Title>
+          <span className="d-flex align-items-center">
             <p className="duration">{duration}</p>
             <p className="ms-auto price">$ {price}</p>
           </span>
