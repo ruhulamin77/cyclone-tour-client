@@ -4,7 +4,7 @@ This project hosting heroku and live at netlify in [This Link](https://cyclone-t
 
 ## Used Languages
 
-- HTMML
+- HTML
 - CSS
 - JavaScript
 - React
